@@ -1,0 +1,153 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the App container fill the full screen */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.history {
+  width: 20%;
+  background-color: #f9f8f8;
+  color: white;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+/* Hide .history on mobile devices (screens smaller than 768px) */
+
+
+
+.hisheader {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  border-bottom: 2px solid #c2c3c2;
+}
+
+.profilepic {
+  border-radius: 50%;
+  height: 5vh;
+  margin-left: 10px;
+}
+
+.settingsbtn {
+  height: 5vh;
+  margin-right: 10px;
+}
+
+.conversation {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefffe;
+  padding-top: 20px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.conv {
+  flex-grow: 1;
+  background-color: #fefffe;
+  border: 1px solid #c2c3c2;
+  border-radius: 10px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  width: 70%;
+  margin-top: 10vh;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mytext, .aitext {
+  color: #141415;
+  font-weight: bold;
+  background-color: #f3f2f2;
+  width: 50vw;
+  max-width: 90%;
+  border-radius: 10px;
+  padding: 20px;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.text-input {
+  flex: 1;
+  background-color:#f4f5f5;
+  color: #8d8c8d;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  min-height: 40px;
+}
+
+.mytext {
+  align-self: flex-end;
+}
+
+.aitext {
+  align-self: flex-start;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  background-color: #f4f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: auto;
+  width: 70%;
+  margin-bottom: 3vh;
+}
+
+.send-btn {
+  background-color: #000101;
+  color: #fefffe;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #fefffe;
+  color: #000101;
+}
+
+
+@media (max-width: 768px) {
+  .history {
+    display: none;
+  }
+  .conv{
+    width: 100%;
+  }
+  .conversation{
+    width: 90%;
+    margin-left: 5%;
+  }
+}
